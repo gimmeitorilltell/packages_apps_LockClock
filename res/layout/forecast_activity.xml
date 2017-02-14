@@ -27,14 +27,12 @@
     <LinearLayout
         android:layout_width="@dimen/forecast_dialog_width"
         android:layout_height="wrap_content"
-        android:background="@drawable/dialog_full_holo_dark"
         android:gravity="center_vertical"
         android:orientation="vertical" >
 
-        <LinearLayout
+        <RelativeLayout 
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:weightSum="1"
             android:gravity="center_horizontal">
 
             <TextView
@@ -43,22 +41,16 @@
                 android:layout_height="match_parent"
                 android:gravity="center|center_horizontal"
                 android:singleLine="true"
-                android:ellipsize="end"
-                android:layout_weight="0.8"
-                android:paddingLeft="3dp"
-                android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <ImageView
                 android:id="@+id/weather_refresh"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
                 android:padding="8dp"
                 android:src="@drawable/ic_menu_refresh"
-                android:layout_weight="0.2"
                 android:background="?android:attr/selectableItemBackground" />
-        </LinearLayout>
+        </RelativeLayout>
 
         <ImageView
             android:layout_width="match_parent"
@@ -67,7 +59,6 @@
             android:background="@android:drawable/divider_horizontal_dark" />
 
         <RelativeLayout
-            android:id="@+id/current_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -86,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/weather_image"
+                android:layout_toStartOf="@id/weather_image"
                 android:orientation="horizontal"
                 android:padding="4dip" >
 
@@ -98,7 +89,7 @@
                     android:ellipsize="marquee"
                     android:gravity="center_horizontal"
                     android:maxLines="2"
-                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -109,7 +100,7 @@
                     android:layout_below="@id/weather_city"
                     android:layout_centerHorizontal="true"
                     android:gravity="center_horizontal"
-                    android:textColor="?android:attr/textColorSecondaryInverse"
+                    android:textColor="?android:attr/textColorSecondary"
                     android:textSize="10sp" />
             </RelativeLayout>
 
@@ -118,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/weather_image"
+                android:layout_toEndOf="@id/weather_image"
                 android:orientation="horizontal" >
 
                 <TextView
@@ -126,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <TextView
                     android:id="@+id/weather_low_high"
@@ -136,7 +127,7 @@
                     android:layout_centerHorizontal="true"
                     android:paddingBottom="2dip"
                     android:textSize="12sp"
-                    android:textColor="?android:attr/textColorPrimaryInverse" />
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <ImageView
                     android:id="@+id/weather_divider"
@@ -154,7 +145,7 @@
                     android:layout_centerHorizontal="true"
                     android:paddingTop="2dip"
                     android:textSize="12sp"
-                    android:textColor="?android:attr/textColorPrimaryInverse" />
+                    android:textColor="?android:attr/textColorPrimary" />
             </RelativeLayout>
 
             <TextView
@@ -165,48 +156,25 @@
                 android:layout_centerHorizontal="true"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:paddingBottom="8dp" />
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/forecast_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dip"
             android:layout_marginStart="12dip"
+            android:layout_marginRight="12dip"
+            android:paddingBottom="16dp"
             android:gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fadingEdgeLength="12dp"
-                android:requiresFadingEdge="horizontal"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:id="@+id/forecast_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
-            </HorizontalScrollView>
-        </LinearLayout>
+            android:orientation="horizontal" />
 
         <ProgressBar
             android:id="@+id/progress_indicator"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="center" />
- 
-        <TextView
-            android:id="@+id/no_network"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmallInverse"
-            android:padding="8dp"
-            android:visibility="gone" />
 
         <LinearLayout android:id="@+id/buttonPanel"
             android:layout_width="match_parent"
@@ -217,25 +185,16 @@
             android:showDividers="beginning"
             android:dividerPadding="0dip">
 
-            <LinearLayout
-                style="?android:attr/buttonBarStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layoutDirection="locale"
-                android:measureWithLargestChild="true">
-
-                <Button android:id="@+id/button"
-                    android:layout_width="0dip"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:maxLines="2"
-                    android:text="@string/menu_done"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:textSize="14sp"
-                    android:minHeight="48dp"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+            <Button android:id="@+id/button"
+                android:layout_width="0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="@string/menu_done"
+                style="?android:attr/buttonBarButtonStyle"
+                android:textSize="14sp"
+                android:minHeight="48dp"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

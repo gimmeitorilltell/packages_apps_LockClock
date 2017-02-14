@@ -100,8 +100,6 @@
   <string name="weather_refreshing">Actualizare</string>
   <string name="weather_last_sync_just_now">Acum</string>
   <string name="weather_cannot_reach_provider">Nu se poate contacta %s acum</string>
-  <string name="weather_source_not_selected">Nicio sursă de vreme selectată</string>
-  <string name="weather_tap_to_select_source">Atingeți pentru a selecta</string>
   <!-- Weather - Update frequency -->
   <string name="weather_refresh_manual">Manual</string>
   <string name="weather_refresh_30min">30 minute</string>
@@ -129,6 +127,7 @@
   <string name="weather_enabled">Activat</string>
   <string name="weather_enable">Afișare meteo</string>
   <string name="weather_source_title">Sursă meteo</string>
+  <string name="weather_source_yahoo">Yahoo! Meteo</string>
   <string name="weather_use_custom_location">Locație personalizată</string>
   <string name="weather_geolocated">Localizare utilizând rețeaua</string>
   <string name="weather_custom_location_dialog_title">Introduceți locația</string>

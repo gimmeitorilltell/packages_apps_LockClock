@@ -127,6 +127,7 @@
   <string name="weather_enabled">ಸಕ್ರಿಯಗೊಂಡಿದೆ</string>
   <string name="weather_enable">ಹವಾಮಾನ ಪ್ರದರ್ಶಿಸು</string>
   <string name="weather_source_title">ಹವಾಮಾನ ಮೂಲ</string>
+  <string name="weather_source_yahoo">ಯಾಹೂ! ಹವಾಮಾನ</string>
   <string name="weather_use_custom_location">ಕಸ್ಟಂ ಸ್ಥಳವನ್ನು ಉಪಯೋಗಿಸಿ</string>
   <string name="weather_geolocated">ನೆಟ್‌ವರ್ಕ್ ಉಪಯೋಗಿಸಿ ಜಿಯೋಲೊಕೇಟ್ ಮಾಡಿದೆ</string>
   <string name="weather_custom_location_dialog_title">ಸ್ಥಳವನ್ನು ಹಾಕಿ</string>
@@ -150,7 +151,6 @@
   <string name="calendar_title">ಮುಂದಿನ ಘಟನೆಯನ್ನು ಪ್ರದರ್ಶಿಸು</string>
   <string name="calendars_title">ಘಟನೆ ಕ್ಯಾಲೆಂಡರ್‍ಗಳು</string>
   <string name="calendars_summary">ಈ ಕ್ಯಾಲೆಂಡರ್‍ಗಳಿಂದ ಘಟನೆಗಳನ್ನು ಹುಡುಕು</string>
-  <string name="calendars_none_found_summary">ಯಾವುದೇ ಕ್ಯಾಲೆಂಡರ್‍ಗಳಿಲ್ಲ</string>
   <string name="calendar_reminders_only_title">ಜ್ಞಾಪನೆಗಳು ಮಾತ್ರ</string>
   <string name="calendar_reminders_only_summary">ಜ್ಞಾಪನೆಗಳುಳ್ಳ ಘಟನೆಗಳನ್ನು ಮಾತ್ರ ಪ್ರದರ್ಶಿಸು</string>
   <string name="calendar_hide_allday_title">ಪೂರ್ತಿ-ದಿನ ಘಟನೆಗಳನ್ನು ಮರೆಮಾಡು</string>

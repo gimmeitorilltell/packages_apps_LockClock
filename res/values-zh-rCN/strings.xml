@@ -100,8 +100,6 @@
   <string name="weather_refreshing">正在刷新</string>
   <string name="weather_last_sync_just_now">刚刚</string>
   <string name="weather_cannot_reach_provider">暂时无法访问 %s</string>
-  <string name="weather_source_not_selected">没有选择天气源</string>
-  <string name="weather_tap_to_select_source">点击以选择一个</string>
   <!-- Weather - Update frequency -->
   <string name="weather_refresh_manual">手动</string>
   <string name="weather_refresh_30min">30 分钟</string>
@@ -129,6 +127,7 @@
   <string name="weather_enabled">已启用</string>
   <string name="weather_enable">显示天气</string>
   <string name="weather_source_title">天气来源</string>
+  <string name="weather_source_yahoo">雅虎天气</string>
   <string name="weather_use_custom_location">使用自定义的位置</string>
   <string name="weather_geolocated">使用网络定位</string>
   <string name="weather_custom_location_dialog_title">输入位置</string>
@@ -138,7 +137,7 @@
   <string name="weather_show_timestamp_title">显示更新时间</string>
   <string name="weather_refresh_interval">更新间隔</string>
   <string name="weather_use_metric">使用公制</string>
-  <string name="weather_retrieve_location_dialog_title">无法取得位置！</string>
+  <string name="weather_retrieve_location_dialog_title">无法查询位置!</string>
   <string name="weather_retrieve_location_dialog_message">网络定位已被禁用。\n\n请设置一个自定义的位置或启用网络定位服务</string>
   <string name="weather_retrieve_location_dialog_enable_button">启用</string>
   <string name="weather_invert_lowhigh">交换高低温度显示的位置</string>
